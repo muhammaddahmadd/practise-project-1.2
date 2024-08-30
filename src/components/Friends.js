@@ -1,7 +1,7 @@
 
 
-function Friends({ name, id, img, balance }){
-    return <li className="friends">
+function Friends({ name, id, img, balance, onClickFriend }){
+    return <li className="friends" onClick={()=>onClickFriend(id)}>
         <img src={img} alt="images" className="avatar"/>
         <h3 className="name">{name}</h3>
        {balance < 0 &&
@@ -13,7 +13,7 @@ function Friends({ name, id, img, balance }){
         {balance > 0 &&
             <p className="green"> {name} owe you {balance}$ </p>
         }
-        <button className="button">Select</button>
+        <button onClick={() => onClickFriend(id)} className="button" >Select</button>
     </li>
 }
 
