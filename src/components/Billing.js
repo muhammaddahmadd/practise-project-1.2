@@ -2,7 +2,7 @@
 function Billing({click}){
     const {name, id, balance} = click;
     return <form className="form-split-bill">
-        <h2>Split bill with {name} </h2>
+        <h2>Split bill with {!name? "(Click on any friend)" : name} </h2>
         <p>Total bill:</p>
         <input type="number"/>
         <p>Your expense:</p>
