@@ -13,6 +13,7 @@ function Friends({ name, id, img, balance }){
         {balance > 0 &&
             <p className="green"> {name} owe you {balance}$ </p>
         }
+        <button className="button">Select</button>
     </li>
 }
 
