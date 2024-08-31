@@ -69,10 +69,13 @@ console.log(initialFriends,"initial Friends")
     const newfren= {
       id: Math.floor(Math.random() * 1000000),
       name: name,
-      imageUrl: imageUrl
+      image: imageUrl
     }
     console.log(newfren)
     setFriend(friend=>[...friend, newfren])
+    setImageUrl("")
+    setName("")
+    isOpen(false)
   }
   // const data = initialFriends;
   return (
