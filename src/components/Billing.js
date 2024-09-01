@@ -13,9 +13,10 @@ function Billing({click}){
 
     function handleFormSplit(e){
         e.preventDefault();
-        
+
     }
 
+    
     return <form className="form-split-bill"  onSubmit={handleFormSplit}>
         <h2>Split bill with {!name? "(Click on any friend)" : name} </h2>
         <p>Total bill:</p>
