@@ -16,20 +16,20 @@ function Billing({click}){
 
     }
 
-    
+
     return <form className="form-split-bill"  onSubmit={handleFormSplit}>
         <h2>Split bill with {!name? "(Click on any friend)" : name} </h2>
         <p>Total bill:</p>
         <input type="number" value={bill} onChange={handleBillAmount}/>
         <p>Your expense:</p>
         <input type="number" />
-        <p>{name}'s expense</p>
+        <p>{name? name: "Friend"}'s expense</p>
         <input type="number" disabled />
        
        <p>Who's paying the bill:</p>
         <select>
             <option>You</option>
-            <option>{name}</option>
+            <option>{name? name: "Friend"}</option>
         </select>
         <button type="submit" className="button">Split bill</button>
     </form>
