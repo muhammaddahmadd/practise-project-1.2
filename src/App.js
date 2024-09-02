@@ -30,22 +30,43 @@ const initialFriends = [
 function App() {
   const [friend, setFriend] = useState(initialFriends);
   const [open, isOpen] = useState(false)
-  const [opened, setOpened] = useState("");
-
+  const [opened, setOpened] = useState("")
   const [name, setName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const [click, setClicked] = useState("")
-  console.log(initialFriends,"initial Friends")
+  const [bill, setBill] = useState("");
+  const [myExpense, setMyExpense] = useState("");
+  console.log(click, "click")
   console.log(friend, "friend")
-  console.log(opened, "opened")
+  function handleBillAmount(e) {
+    setBill(e.target.value)
+  }
+  function handleMyExpense(e) {
+    setMyExpense(e.target.value)
+  }
+
+  function handleFormSplit(e) {
+    e.preventDefault();
+    if (bill <= 0) return;
+    setBill(bill);
+    setMyExpense(myExpense);
+    // setFriend(friend =>
+    //   friend.map(fren =>
+    //     fren.id === click.id ? alert(fren.balance) : alert("None")
+    //   )
+    // );
+
+    setBill("");
+    setMyExpense("")
+  
+  }
+  const friendExpense = bill - myExpense; 
+
   function handleClickedFriend(id) {
     const clickedFriend = friend.find(fren => fren.id === id);
     if (clickedFriend) {
       setClicked(clickedFriend);
     }
-    // setOpened(opened=> click.id === id? true: false);
-    setOpened(click => click.id === id ? true : false);
-    console.log(opened);
   }
 
 
@@ -74,7 +95,7 @@ function App() {
       name: name,
       image: imageUrl
     }
-    console.log(newfren)
+
     setFriend(friend=>[...friend, newfren])
     setImageUrl("")
     setName("")
@@ -90,7 +111,7 @@ function App() {
           <AddForm name={name} imageUrl={imageUrl} onAddName={handleName} onAddUrl={handleImage} onAdd={handleAddSubmission}/>}
         {open && <Button onClick={handleClose}>Close</Button>}
         </div>
-          <Billing click={click}/>
+      <Billing bill={bill} friendExpense={friendExpense} handleFormSplit={handleFormSplit} handleMyExpense={handleMyExpense} handleBillAmount={handleBillAmount} myExpense={myExpense} click={click}/>
         </div>
   );
 }

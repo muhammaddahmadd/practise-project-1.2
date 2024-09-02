@@ -1,27 +1,15 @@
 import { useState } from "react";
 
-function Billing({click}){
+function Billing({ click, bill, myExpense, handleFormSplit, handleMyExpense, handleBillAmount, friendExpense }){
     const {name, id, balance} = click;
-    const [bill, setBill] = useState("");
-    const [myExpense, setMyExpense] = useState("");
+
     // const [friendExpense, setFriendExpense] = useState()
     const [sort, setSort] = useState("")
 
-    function handleBillAmount(e){
-        setBill(e.target.value)
-    }
-    function handleMyExpense(e) {
-        setMyExpense(e.target.value)
-    }
+   
 
-    function handleFormSplit(e){
-        e.preventDefault();
-       if(bill <=0 ) return;
-           setBill(bill);
-           setMyExpense(myExpense);
-    }
 
-     const friendExpense = bill - myExpense; 
+     
 
     return <form className="form-split-bill"  onSubmit={handleFormSplit}>
         <h2>Split bill with {!name? "(Click on any friend)" : name} </h2>
