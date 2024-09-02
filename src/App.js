@@ -30,19 +30,22 @@ const initialFriends = [
 function App() {
   const [friend, setFriend] = useState(initialFriends);
   const [open, isOpen] = useState(false)
+  const [opened, setOpened] = useState("");
+
   const [name, setName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const [click, setClicked] = useState("")
-console.log(initialFriends,"initial Friends")
+  console.log(initialFriends,"initial Friends")
   console.log(friend, "friend")
-
-
+  console.log(opened, "opened")
   function handleClickedFriend(id) {
     const clickedFriend = friend.find(fren => fren.id === id);
     if (clickedFriend) {
       setClicked(clickedFriend);
     }
-    console.log(clickedFriend);
+    // setOpened(opened=> click.id === id? true: false);
+    setOpened(click => click.id === id ? true : false);
+    console.log(opened);
   }
 
 
@@ -81,7 +84,7 @@ console.log(initialFriends,"initial Friends")
   return (
     <div className="app">
          <div className="sidebar">
-        <FriendsList click={click} onClickFriend={handleClickedFriend} data={friend} />
+        <FriendsList opened={opened} click={click} onClickFriend={handleClickedFriend} data={friend} />
          {!open && <Button onClick={handleOpen} >Add friend</Button>}
         {open &&    
           <AddForm name={name} imageUrl={imageUrl} onAddName={handleName} onAddUrl={handleImage} onAdd={handleAddSubmission}/>}
