@@ -80,15 +80,15 @@ console.log(initialFriends,"initial Friends")
   // const data = initialFriends;
   return (
     <div className="app">
-      <div className="sidebar">
+         <div className="sidebar">
         <FriendsList click={click} onClickFriend={handleClickedFriend} data={friend} />
-       {!open && <Button onClick={handleOpen} >Add friend</Button>}
+         {!open && <Button onClick={handleOpen} >Add friend</Button>}
         {open &&    
           <AddForm name={name} imageUrl={imageUrl} onAddName={handleName} onAddUrl={handleImage} onAdd={handleAddSubmission}/>}
         {open && <Button onClick={handleClose}>Close</Button>}
-  </div>
-   <Billing click={click}/>
-    </div>
+        </div>
+          <Billing click={click}/>
+        </div>
   );
 }
 

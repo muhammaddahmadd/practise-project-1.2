@@ -10,21 +10,27 @@ function Billing({click}){
     function handleBillAmount(e){
         setBill(e.target.value)
     }
+    function handleMyExpense(e) {
+        setMyExpense(e.target.value)
+    }
 
     function handleFormSplit(e){
         e.preventDefault();
-
+       if(bill <=0) return
+       setBill(bill);
+       setMyExpense(myExpense);
     }
 
+     const friendExpense = bill - myExpense; 
 
     return <form className="form-split-bill"  onSubmit={handleFormSplit}>
         <h2>Split bill with {!name? "(Click on any friend)" : name} </h2>
         <p>Total bill:</p>
         <input type="number" value={bill} onChange={handleBillAmount}/>
         <p>Your expense:</p>
-        <input type="number" />
+        <input type="number" value={myExpense} onChange={handleMyExpense}/>
         <p>{name? name: "Friend"}'s expense</p>
-        <input type="number" disabled />
+        <input type="number" disabled  value={friendExpense}/>
        
        <p>Who's paying the bill:</p>
         <select>
