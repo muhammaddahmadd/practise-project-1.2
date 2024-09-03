@@ -8,6 +8,7 @@ import { useState } from 'react';
 
 
 const initialFriends = [
+  
   {
     id: 118836,
     name: "Tahoor",
