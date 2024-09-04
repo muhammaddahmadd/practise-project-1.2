@@ -22,7 +22,7 @@ const initialFriends = [
     image: "https://ca.slack-edge.com/T09RX1EUE-U04H8QV60UC-2d836fbdb965-72",
     balance: 20,
   },
-  
+
   {
     id: 499476,
     name: "Jawad",
@@ -40,7 +40,7 @@ function App() {
   const [bill, setBill] = useState("");
   const [myExpense, setMyExpense] = useState("");
   console.log(click, "click")
-  console.log(friend, "friend")
+  console.log(friend, "friend")// del this
   function handleBillAmount(e) {
     setBill(e.target.value)
   }
