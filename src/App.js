@@ -8,7 +8,7 @@ import { useState } from 'react';
 
 
 const initialFriends = [
-  
+
   {
     id: 118836,
     name: "Tahoor",
@@ -39,6 +39,7 @@ function App() {
   const [click, setClicked] = useState("")
   const [bill, setBill] = useState("");
   const [myExpense, setMyExpense] = useState("");
+  const [dummyState, setDummyState ] = useState("");
   console.log(click, "click")
   console.log(friend, "friend")// del this
   function handleBillAmount(e) {
