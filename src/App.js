@@ -39,7 +39,6 @@ function App() {
   const [click, setClicked] = useState("")
   const [bill, setBill] = useState("");
   const [myExpense, setMyExpense] = useState("");
-  const [dummyState, setDummyState ] = useState("");
   console.log(click, "click")
   console.log(friend, "friend")
   console.log(friend, "friend")
