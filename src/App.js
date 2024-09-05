@@ -41,7 +41,8 @@ function App() {
   const [myExpense, setMyExpense] = useState("");
   const [dummyState, setDummyState ] = useState("");
   console.log(click, "click")
-  console.log(friend, "friend")// del this
+  console.log(friend, "friend")
+  console.log(friend, "friend")
   function handleBillAmount(e) {
     setBill(e.target.value)
   }
