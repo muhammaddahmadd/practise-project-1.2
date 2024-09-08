@@ -34,6 +34,7 @@ function App() {
   const [friend, setFriend] = useState(initialFriends);
   const [open, isOpen] = useState(false)
   const [opened, setOpened] = useState("")
+  const [temp, setTemp] = useState("")
   const [name, setName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const [click, setClicked] = useState("")
