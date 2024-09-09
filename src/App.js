@@ -35,6 +35,7 @@ function App() {
   const [open, isOpen] = useState(false)
   const [opened, setOpened] = useState("")
   const [temp, setTemp] = useState("")
+  const [temp, setTemp] = useState("")// needed to be deleted
   const [name, setName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const [click, setClicked] = useState("")
