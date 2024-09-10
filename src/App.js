@@ -32,6 +32,7 @@ const initialFriends = [
 ];
 function App() {
   const [friend, setFriend] = useState(initialFriends);
+  const [myf, setmyF] = useState("")
   const [open, isOpen] = useState(false)
   const [opened, setOpened] = useState("")
   const [temp, setTemp] = useState("")
