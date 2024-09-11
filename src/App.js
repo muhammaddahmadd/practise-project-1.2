@@ -32,18 +32,13 @@ const initialFriends = [
 ];
 function App() {
   const [friend, setFriend] = useState(initialFriends);
-  const [myf, setmyF] = useState("")
   const [open, isOpen] = useState(false)
   const [opened, setOpened] = useState("")
-  const [temp, setTemp] = useState("")
   const [name, setName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const [click, setClicked] = useState("")
   const [bill, setBill] = useState("");
   const [myExpense, setMyExpense] = useState("");
-  console.log(click, "click")
-  console.log(friend, "friend")
-  console.log(friend, "friend")
   function handleBillAmount(e) {
     setBill(e.target.value)
   }
