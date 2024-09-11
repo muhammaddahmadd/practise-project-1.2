@@ -35,6 +35,7 @@ function App() {
   const [myf, setmyF] = useState("")
   const [open, isOpen] = useState(false)
   const [opened, setOpened] = useState("")
+  const [aopened, setaOpened] = useState("")
   const [temp, setTemp] = useState("")
   const [name, setName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
