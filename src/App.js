@@ -43,6 +43,9 @@ function App() {
   function handleBillAmount(e) {
     setBill(e.target.value)
   }
+  // function handleBillAmount(e) {
+  //   setBill(e.target.value)
+  // }
   function handleMyExpense(e) {
     setMyExpense(e.target.value)
   }
