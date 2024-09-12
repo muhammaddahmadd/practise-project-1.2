@@ -34,7 +34,6 @@ function App() {
   const [friend, setFriend] = useState(initialFriends);
   const [open, isOpen] = useState(false)
   const [opened, setOpened] = useState("")
-  const [temp, setTemp] = useState("")
   const [name, setName] = useState("");
   const [imageUrl, setImageUrl] = useState("");
   const [click, setClicked] = useState("")
@@ -43,9 +42,6 @@ function App() {
   function handleBillAmount(e) {
     setBill(e.target.value)
   }
-  // function handleBillAmount(e) {
-  //   setBill(e.target.value)
-  // }
   function handleMyExpense(e) {
     setMyExpense(e.target.value)
   }
@@ -55,12 +51,6 @@ function App() {
     if (bill <= 0) return;
     setBill(bill);
     setMyExpense(myExpense);
-    // setFriend(friend =>
-    //   friend.map(fren =>
-    //     fren.id === click.id ? alert(fren.balance) : alert("None")
-    //   )
-    // );
-
     setBill("");
     setMyExpense("")
   
@@ -71,10 +61,15 @@ function App() {
     const clickedFriend = friend.find(fren => fren.id === id);
     if (clickedFriend) {
       setClicked(clickedFriend);
+      console.log(clickedFriend.balance)
     }
   }
 
-
+  function handleSplit(id){
+    const clickedFriend = friend.find(fren => fren.id === id);
+   console.log(clickedFriend.balance)
+      
+  }
 
  function handleOpen(){
     isOpen(open => !open)
@@ -106,7 +101,6 @@ function App() {
     setName("")
     isOpen(false)
   }
-  // const data = initialFriends;
   return (
     <div className="app">
          <div className="sidebar">
