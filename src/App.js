@@ -47,6 +47,7 @@ function App() {
   }
 
   function handleFormSplit(e) {
+
     e.preventDefault();
     if (bill <= 0) return;
     setBill(bill);
@@ -65,11 +66,12 @@ function App() {
     }
   }
 
-  function handleSplit(id){
-    const clickedFriend = friend.find(fren => fren.id === id);
-   console.log(clickedFriend.balance)
+  // function handleSplit(id){
+  //   alert("you hit me")
+  //   const clickedFriend = friend.find(fren => fren.id === id);
+  //  console.log(clickedFriend.balance)
       
-  }
+  // }
 
  function handleOpen(){
     isOpen(open => !open)
@@ -88,6 +90,7 @@ function App() {
   }
 
   function handleAddSubmission(e){
+
     e.preventDefault();
     if (!name.length) return alert("Please enter name")
     const newfren= {
