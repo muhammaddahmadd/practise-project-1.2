@@ -39,6 +39,7 @@ function App() {
   const [click, setClicked] = useState("")
   const [bill, setBill] = useState("");
   const [myExpense, setMyExpense] = useState("");
+  const [selected, setSeleted] = useState("")
   function handleBillAmount(e) {
     setBill(e.target.value)
   }
@@ -46,13 +47,30 @@ function App() {
     setMyExpense(e.target.value)
   }
 
+
+  function handleSplition(id) {
+
+    if (bill <= 0) return;
+    setFriend(friend =>
+      friend.map(frn =>
+        frn.id === id ? { ...frn, balance: frn.balance + friendExpense } : frn
+      )
+
+    );
+    console.log(id)
+  }
+
+
+
   function handleFormSplit(e) {
     e.preventDefault();
-    if (bill <= 0) return;
+   
+
     setBill(bill);
     setMyExpense(myExpense);
     setBill("");
     setMyExpense("")
+    setBill()
   
   }
   const friendExpense = bill - myExpense; 
@@ -65,11 +83,11 @@ function App() {
     }
   }
 
-  function handleSplit(id){
-    const clickedFriend = friend.find(fren => fren.id === id);
-   console.log(clickedFriend.balance)
+  // function handleSplit(id){
+  //   const clickedFriend = friend.find(fren => fren.id === id);
+  //  console.log(clickedFriend.balance)
       
-  }
+  // }
 
  function handleOpen(){
     isOpen(open => !open)
@@ -110,7 +128,7 @@ function App() {
           <AddForm name={name} imageUrl={imageUrl} onAddName={handleName} onAddUrl={handleImage} onAdd={handleAddSubmission}/>}
         {open && <Button onClick={handleClose}>Close</Button>}
         </div>
-      <Billing bill={bill} friendExpense={friendExpense} handleFormSplit={handleFormSplit} handleMyExpense={handleMyExpense} handleBillAmount={handleBillAmount} myExpense={myExpense} click={click}/>
+      <Billing bill={bill} handleSplition={handleSplition} friendExpense={friendExpense} handleFormSplit={handleFormSplit} handleMyExpense={handleMyExpense} handleBillAmount={handleBillAmount} myExpense={myExpense} click={click}/>
         </div>
   );
 }
