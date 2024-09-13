@@ -63,6 +63,7 @@ function App() {
 
 
   function handleFormSplit(e) {
+
     e.preventDefault();
    
 
@@ -106,6 +107,7 @@ function App() {
   }
 
   function handleAddSubmission(e){
+
     e.preventDefault();
     if (!name.length) return alert("Please enter name")
     const newfren= {
