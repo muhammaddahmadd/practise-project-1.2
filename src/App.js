@@ -57,6 +57,10 @@ function App() {
       )
 
     );
+
+    setBill("");
+    setMyExpense("")
+    setBill()
     console.log(id)
   }
 
