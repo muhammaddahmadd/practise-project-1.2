@@ -54,8 +54,11 @@ function App() {
     setMyExpense(myExpense);
     setBill("");
     setMyExpense("")
-  
+
+
   }
+
+
   const friendExpense = bill - myExpense; 
 
   function handleClickedFriend(id) {
