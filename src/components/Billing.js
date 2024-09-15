@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Billing({ click, bill, myExpense, handleFormSplit, handleMyExpense, handleBillAmount, friendExpense }){
+function Billing({ click, bill, myExpense, handleSelection, handleSplition, handleFormSplit, handleMyExpense, handleBillAmount, friendExpense }){
     const {name, id, balance} = click;
 
     // const [friendExpense, setFriendExpense] = useState()
@@ -21,11 +21,11 @@ function Billing({ click, bill, myExpense, handleFormSplit, handleMyExpense, han
         <input type="number" disabled  value={bill? friendExpense: ""}/>
        
        <p>Who's paying the bill:</p>
-        <select>
+        <select onChange={handleSelection}>
             <option>You</option>
             <option>{name? name: "Friend"}</option>
         </select>
-        <button type="submit" className="button">Split bill</button>
+        <button type="submit" className="button" onClick={()=>handleSplition(id)}>Split bill</button>
     </form>
 }
 
