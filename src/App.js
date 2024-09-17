@@ -34,6 +34,11 @@ const initialFriends = [
     name: "Jawad",
     image: "https://ca.slack-edge.com/T09RX1EUE-U040N4KEECX-af78354b4aa0-72",
     balance: 0,
+  }, {
+    id: 499476,
+    name: "Jawad",
+    image: "https://ca.slack-edge.com/T09RX1EUE-U040N4KEECX-af78354b4aa0-72",
+    balance: 0,
   },
 ];
 function App() {
