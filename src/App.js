@@ -22,8 +22,12 @@ const initialFriends = [
     name: "Abdul Rehman",
     image: "https://ca.slack-edge.com/T09RX1EUE-U04H8QV60UC-2d836fbdb965-72",
     balance: 20,
+  }, {
+  id: 933372,
+  name: "Abdul Rehman",
+  image: "https://ca.slack-edge.com/T09RX1EUE-U04H8QV60UC-2d836fbdb965-72",
+  balance: 20,
   },
-
   {
     id: 499476,
     name: "Jawad",
