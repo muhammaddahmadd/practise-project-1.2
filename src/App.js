@@ -16,6 +16,12 @@ const initialFriends = [
     image: "https://media.licdn.com/dms/image/v2/C4D03AQGvlJmHd4Qgxw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1574856200229?e=1730332800&v=beta&t=EaEtt-a1qdi0DvXjHqLE6zWzhEUiGZ4-eYpPnvIB2pk",
     balance: -7,
   },
+  {
+    id: 118836,
+    name: "Tahoor",
+    image: "https://media.licdn.com/dms/image/v2/C4D03AQGvlJmHd4Qgxw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1574856200229?e=1730332800&v=beta&t=EaEtt-a1qdi0DvXjHqLE6zWzhEUiGZ4-eYpPnvIB2pk",
+    balance: -7,
+  },
 
   {
   id: 118836,
