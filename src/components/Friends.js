@@ -1,8 +1,11 @@
 import { useState } from "react";
 
 
-function Friends({ name, id, img, balance, onClickFriend, opened }){
+function Friends({ name, id, img, balance, onClickFriend, opened, click }){
 
+
+    const selectedFriend =  click?.id === id;
+    console.log(selectedFriend)
 
     return <li className="friends" >
         <img src={img} alt="images" className="avatar"/>

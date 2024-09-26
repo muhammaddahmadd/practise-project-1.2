@@ -11,7 +11,7 @@ function Billing({ click, bill, myExpense, handleSelection, handleSplition, hand
 
      
 
-    return <form className="form-split-bill"  onSubmit={handleFormSplit}>
+    return <form className="form-split-bill"  onSubmit={()=>handleFormSplit(id)}>
         <h2>Split bill with {!name? "(Click on any friend)" : name} </h2>
         <p>Total bill:</p>
         <input type="number" value={bill} onChange={handleBillAmount}/>
@@ -25,7 +25,7 @@ function Billing({ click, bill, myExpense, handleSelection, handleSplition, hand
             <option>You</option>
             <option>{name? name: "Friend"}</option>
         </select>
-        <button type="submit" className="button" onClick={()=>handleSplition(id)}>Split bill</button>
+        <button type="submit" className="button" >Split bill</button>
     </form>
 }
 
